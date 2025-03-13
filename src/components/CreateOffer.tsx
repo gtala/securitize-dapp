@@ -127,13 +127,21 @@ export function CreateOffer() {
             </div>
         )}
 
-        {/* Error Message */}
         {(isPrepareError || isError) && (
-            <div className="mt-4 p-2 border rounded bg-red-100 text-red-700">
-              Error: {(prepareError || error)?.message}
+            <div
+                style={{
+                  marginTop: "16px",
+                  padding: "12px",
+                  borderLeft: "4px solid red",
+                  backgroundColor: "#fdecea",
+                  color: "#d32f2f",
+                  borderRadius: "4px",
+                  fontWeight: "bold",
+                }}
+            >
+              Error: You have to allow token spent to Marketplace contract
             </div>
         )}
-
         {/* Display all offers */}
         <div className="mt-6">
           <h2 className="text-xl font-bold mb-4">Available Offers</h2>
